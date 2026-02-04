@@ -1,0 +1,14 @@
+<script>
+const target = {};
+const handler = {
+  set(obj, prop, value) {
+    obj[prop] = value;
+    return true;
+  }
+};
+const proxy = new Proxy(target, handler);
+proxy.nama = "Ridho";
+console.log(proxy.nama);
+</script>
+
+<!-- Proxy digunakan untuk mengontrol atau memantau akses terhadap object. -->
